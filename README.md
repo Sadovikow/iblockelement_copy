@@ -57,14 +57,14 @@ if ($ob = $resource->GetNextElement()) {
     while ($i <= $copycount):
         echo $i;
         $i++;
-        $arFieldsCopy['NAME'] = 'Баннер 2' . $i;
+        $arFieldsCopy['NAME'] = 'Wonderful item ' . $i;
         $el                   = new CIBlockElement();
         $NEW_ID               = $el->Add($arFieldsCopy);
 
         if (!$NEW_ID) {
             echo $el->LAST_ERROR;
         } else {
-            echo 'Элемент скопирован. ID нового элемента: ' . $NEW_ID;
+            echo 'Item copied. New item ID: ' . $NEW_ID;
         }
 
     endwhile;
